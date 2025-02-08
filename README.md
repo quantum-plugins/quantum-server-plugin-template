@@ -46,7 +46,7 @@ Also, having a `Github` repo with your code is mandatory to be accepted as an of
 
 8. request your plugin to be added to the list
 
-After that, open an issue on [github.com/Dpbm/local-quantum-server](https://github.com/Dpbm/local-quantum-server) requesting your plugin to be added. As soon as possible we'll see that and procede with the addition.
+After that, open an issue on [github.com/quantum-plugins/plugins-list](https://github.com/quantum-plugins/plugins-list) requesting your plugin to be added. As soon as possible we'll see that and procede with the addition.
 
 ## CONGRATS!!!
 
