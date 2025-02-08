@@ -21,10 +21,12 @@ After that update the folder [[your plugin name]](./[your%20plugin%20name]/) to 
 Inside `[your plugin name]` directory, you'll find some files:
 
 - [interface.py](./[your%20plugin%20name]/interface.py): that's the file that creates the abstract class `Plugin`, which your project must use to ensure the correct usability. Don't change this file. Only `import` the `types`, `classes` and `functions` you need.
-- [plugin.py](./[your%20plugin%20name]/plugin.py): that's the plugin starting point. In it, you may list the backends names your plugin can access. Also, you need to add some logic to handle the user input inside the `execute` method. By default, the class uses a decorator (`@check_backend`) to ensure that only defined backends can be accessed. However, you're free to implement your logic and do further checks.
+- [plugin.py](./[your%20plugin%20name]/plugin.py): that's the plugin starting point. In it, you may list the backends names your plugin can access. Also, you need to add some logic to handle the user input inside the `execute` method. By default, the class uses a decorator (`@check_backend`) to ensure that only defined backends can be accessed. However, you're free to implement your logic and do further checks. 
 - [tests](./[your%20plugin%20name]/tests/): Inside this folder, you can add all your tests. They are not mandatory, but is a good practice to make your project safer to new changes.
 
 Besides that, you're allowed to add new files and create your structure. However, keep in mind that, more complex projects may need additional configurations on either [setup.py](./setup.py) or [pyproject.toml](./pyproject.toml).
+
+Also, you need to ensure the correct handling of the `result_types`, the possible inputs are: `'quasi_dist', 'counts', 'expval'`.
 
 4. update the [setup.py](./setup.py)
 
