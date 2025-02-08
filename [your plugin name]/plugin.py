@@ -13,7 +13,7 @@ class Plugin(PluginInterface):
                 Name the backends you have in your plugin as a list!
             """
         ]
-        super().__init__([])
+        super().__init__(backends)
 
     @check_backend
     def execute(self, target_backend:Backend, qasm_file_path:QasmFilePath, metadata:Metadata, result_type:ResultType) -> Results:
