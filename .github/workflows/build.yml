@@ -16,7 +16,7 @@ jobs:
                     - '3.12'
                     - '3.11'
                     - '3.10'
-                    - '3.7'
+                    - '3.7.9'
                 os:
                     - ubuntu-latest
 
@@ -35,5 +35,5 @@ jobs:
                   pip install -r requirements.txt -r dev-requirements.txt
 
             - name: Run tox checks
-              if: ${GITHUB_REF##*/} == 'main'
+              if: ${{ github.ref  == 'main' }}
               run: tox
