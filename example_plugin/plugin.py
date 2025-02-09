@@ -5,6 +5,8 @@ from .interface import (
     ResultType,
     QasmFilePath,
     check_backend,
+    check_result_type,
+    check_qasm_file,
     Results,
 )
 
@@ -25,6 +27,8 @@ class Plugin(PluginInterface):
         super().__init__(backends)
 
     @check_backend
+    @check_result_type
+    @check_qasm_file
     def execute(
         self,
         target_backend: Backend,
@@ -38,7 +42,8 @@ class Plugin(PluginInterface):
         At the end, you must return either a dict(for counts or quasi dist) or a
         floating point number (for expectation values).
 
-        Note: The `check_backend` decorator ensures that only pre-assigned backends are used.
+        Note: The decorators are used to ensure that the request backend,
+            result_type and qasm file are correct.
 
         The client, sends 4 informations that are valuable to you:
             - target_backend: the choosen backend to run the job
