@@ -53,7 +53,7 @@ jobs:
         steps:
             - name: exit if not main branch
               if: ${{ github.ref != 'main' }}
-              run: echo "Not publishing from current branch!" && exit 0
+              run: echo "Not publishing from current branch!" && exit 1
 
             - name: Publish to PYPI
               uses: pypa/gh-action-pypi-publish@release/v1
