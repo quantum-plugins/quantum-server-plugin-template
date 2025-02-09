@@ -35,13 +35,29 @@ jobs:
                   pip install -r requirements.txt -r dev-requirements.txt
 
             - name: Run tox checks
-              run: tox -e py${{ matrix.version }}
+              run: tox
+
+    check_branch:
+        name: Check if it's the branch able to upload to PYPI
+        runs-on: ubuntu-24.04
+
+        needs: tox
+
+        outputs:
+            is_main: ${{ steps.check.outputs.is_main }}
+
+        steps:
+            - name: check is main
+              id: check
+              run: echo "should-run=${{ github.ref == 'main' }}" >> $GITHUB_OUTPUT
 
     publish:
         name: Upload package to PYPI
         runs-on: ubuntu-24.04
 
-        needs: tox
+        needs: check_branch
+
+        if: needs.check_branch.outputs.is_main == 'true'
 
         environment:
             name: pypi
@@ -51,10 +67,6 @@ jobs:
             id-token: write
 
         steps:
-            - name: exit if not main branch
-              if: ${{ github.ref != 'main' }}
-              run: echo "Not publishing from current branch!" && exit 1
-
             - name: Publish to PYPI
               uses: pypa/gh-action-pypi-publish@release/v1
 

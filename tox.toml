@@ -18,9 +18,3 @@ description = "run tests"
 skip_install = false
 deps = ["pytest"]
 commands = [["pytest"]]
-
-[gh.python]
-"3.12" = ["py3.12", "lint", "types", "tests"]
-"3.11" = ["py3.11", "lint", "types", "tests"]
-"3.10" = ["py3.10", "lint", "types", "tests"]
-"3.7" = ["py3.7", "lint", "types", "tests"]
