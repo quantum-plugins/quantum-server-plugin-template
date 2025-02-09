@@ -19,9 +19,6 @@ jobs:
                     - '3.7.5'
                 os:
                     - ubuntu-latest
-                    - ubuntu-latest
-                    - ubuntu-latest
-                    - ubuntu-latest
 
         permissions:
             contents: read
