@@ -35,7 +35,7 @@ jobs:
                   pip install -r requirements.txt -r dev-requirements.txt
 
             - name: Run tox checks
-              run: tox
+              run: tox -e py${{ matrix.version }}
 
     publish:
         name: Upload package to PYPI
@@ -51,9 +51,7 @@ jobs:
             id-token: write
 
         steps:
-            - uses: actions/checkout@v4
-
-            - name: exit if not main branches
+            - name: exit if not main branch
               if: ${{ github.ref != 'main' }}
               run: echo "Not publishing from current branch!" && exit 0
 
