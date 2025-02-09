@@ -1,0 +1,14 @@
+requires = ["tox>=4"]
+env_list = ["lint", "types", "py3.12", "py3.11", "py3.10", "py3.7"]
+
+[env.lint]
+description = "lint code"
+skip_install = false
+deps = ["black", "pylint", "setuptools"]
+commands = [["black", { replace = "posargs", default = ["."], extend = true} ], ["pylint",  { replace = "posargs", default = ["."], extend = true}]]
+
+[env.types]
+description = "check types"
+skip_install = false
+deps = ["mypy", "setuptools", "types-setuptools"]
+commands = [["mypy", { replace = "posargs", default = [".", "--exclude", "build", "--exclude", ".tox"], extend = true} ]]
