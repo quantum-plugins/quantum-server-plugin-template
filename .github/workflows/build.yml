@@ -35,4 +35,5 @@ jobs:
                   pip install -r requirements.txt -r dev-requirements.txt
 
             - name: Run tox checks
+              if: ${GITHUB_REF##*/} == 'main'
               run: tox
