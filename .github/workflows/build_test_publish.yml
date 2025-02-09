@@ -48,7 +48,7 @@ jobs:
         steps:
             - name: check is main
               id: check
-              run: echo "should-run=${{ github.ref == 'main' }}" >> $GITHUB_OUTPUT
+              run: echo "should-run=${{ github.ref == 'refs/heads/main' }}" >> $GITHUB_OUTPUT
 
     publish:
         name: Upload package to PYPI
