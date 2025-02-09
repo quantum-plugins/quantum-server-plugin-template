@@ -16,7 +16,6 @@ jobs:
                     - '3.12'
                     - '3.11'
                     - '3.10'
-                    - '3.7'
                 os:
                     - ubuntu-20.04
 
@@ -38,7 +37,7 @@ jobs:
               run: tox
 
     check_branch:
-        name: Check if it's the branch able to upload to PYPI
+        name: Check if the current branch is able to upload to PYPI
         runs-on: ubuntu-24.04
 
         needs: tox
