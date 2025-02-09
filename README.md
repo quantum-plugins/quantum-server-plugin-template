@@ -20,6 +20,8 @@ Also, using environment managers allows you to easily change python versions. By
 
 After that, update the folder [example_plugin](./example_plugin/) to your plugin's name and start adding your code.
 
+`Note: Make sure your folder name is the same as the plugin's name on setup.py.`
+
 Inside [example_plugin](./example_plugin/) directory, you'll find some files:
 
 - [interface.py](./example_plugin/interface.py): that's the file that creates the abstract class `Plugin`, which your project must use to ensure the correct usability. 
