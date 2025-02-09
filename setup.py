@@ -26,8 +26,8 @@ def get_long_description():
 
 
 setup(
-    name="",  # your plugin name
-    version="",  # your plugin version
+    name="example_plugin",  # your plugin name
+    version="0.0.1",  # your plugin version
     install_requires=get_requirements(),
     packages=find_packages(
         # depending on how you have architected your plugin you may need to update the packages
@@ -47,11 +47,11 @@ setup(
         "Topic :: System",
         "Topic :: System :: Hardware",
     ],
-    url="",  # your repository url
+    url="https://github.com/Dpbm/quantum-server-plugin-template",  # your repository url
     license="MIT",
-    author="",  # your name
-    author_email="",  # your dev email
-    description="",  # describe your plugin
+    author="Dpbm",  # your name
+    author_email="dpbm136@gmail.com",  # your dev email
+    description="A simple quantum plugin",  # describe your plugin
     long_description=get_long_description(),  # remember to update the README.md file
     long_description_content_type="text/markdown",
 )
