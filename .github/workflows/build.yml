@@ -7,16 +7,16 @@ on:
 
 jobs:
     tox:
-        name: Run Tox ${{ matrix.env }}
+        name: Run Tox python-${{ matrix.version }}
         runs-on: ${{ matrix.os }}
         strategy:
             fail-fast: false
             matrix:
-                env:
-                    - '3.12.8'
-                    - '3.11.11'
-                    - '3.10.16'
-                    - '3.7.5'
+                version:
+                    - '3.12'
+                    - '3.11'
+                    - '3.10'
+                    - '3.7'
                 os:
                     - ubuntu-latest
 
@@ -28,7 +28,7 @@ jobs:
 
             - uses: actions/setup-python@v5
               with:
-                  python-version: '3.13'
+                  python-version: ${{ matrix.version }}
 
             - name: install dependencies
               run: |
