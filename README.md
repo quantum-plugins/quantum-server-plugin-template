@@ -1,6 +1,7 @@
 # Quantum Server Plugin
 
 ![build, test and publish](https://github.com/github/Dpbm/quantum-server-plugin-template/workflows/build_test_publish.yml/badge.svg)
+![release version](https://github.com/github/Dpbm/quantum-server-plugin-template/workflows/release.yml/badge.svg)
 
 To create a plugin for [local-quantum-server](https://github.com/Dpbm/local-quantum-server), `start by using this template` and then follow the steps below.
 
