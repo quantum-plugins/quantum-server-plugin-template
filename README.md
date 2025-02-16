@@ -27,7 +27,8 @@ Inside [example_plugin](./example_plugin/) directory, you'll find some files:
 
 - [interface.py](./example_plugin/interface.py): that's the file that creates the abstract class `Plugin`, which your project must use to ensure the correct usability. 
 Don't change this file. Only `import` the `types`, `classes` and `functions` you need.
-- [plugin.py](./example_plugin/plugin.py): that's the plugin starting point. In it, you may list the backends names your plugin can access. Also, you need to add some logic to handle the user input inside the `execute` method. By default, the class uses some decorators to ensure that only correct values are passed (backend name, result type and qasm file (check if it exists)). However, you're free to implement your logic and do further checks.
+- [plugin.py](./example_plugin/plugin.py): that's the plugin starting point. In it, you need to add some logic to handle the user input inside the `execute` method. By default, the class uses some decorators to ensure that only correct values are passed (backend name, result type and qasm file (check if it exists)). However, you're free to implement your logic and do further checks.
+- [backends.txt](./example_plugin/backends.txt): this file, is responsible to store the list of backends your plugin support. Make sure to clean that and add the names line by line.
 - [config.py](./example_plugin/config.py): that's the python file that keeps all the plugin configs. Please, don't change it. 
 
 Besides that, you're allowed to add new files and create your structure. But, keep in mind that, more complex projects may need additional configurations on either [setup.py](./setup.py) or [pyproject.toml](./pyproject.toml).

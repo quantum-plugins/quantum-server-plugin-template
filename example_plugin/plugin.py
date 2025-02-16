@@ -1,3 +1,4 @@
+import os
 from .interface import (
     PluginInterface,
     Backend,
@@ -19,12 +20,12 @@ class Plugin(PluginInterface):
     """
 
     def __init__(self):
-        backends = [
-            """
-                Name the backends you have in your plugin as a list!
-            """
-        ]
-        super().__init__(backends)
+        current_file_path = os.path.dirname(__file__)
+        backends_relative_path = os.path.join(current_file_path, "backends.txt") 
+
+        with open(backends_relative_path, 'r', encoding="UTF-8") as file:
+            backends = list(map(lambda x: x.replace('\n', ''), file)) 
+            super().__init__(backends)
 
     @check_backend
     @check_result_type
