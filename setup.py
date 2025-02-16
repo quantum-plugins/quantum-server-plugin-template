@@ -27,7 +27,7 @@ def get_long_description():
 
 setup(
     name="example_plugin",  # your plugin name
-    version="1.0.1",  # your plugin version
+    version="1.0.2",  # your plugin version
     install_requires=get_requirements(),
     packages=find_packages(
         # depending on how you have architected your plugin you may need to update the packages
