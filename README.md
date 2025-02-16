@@ -66,6 +66,8 @@ So, to do that, go to [.github/workflows/build_test_publish.yml](./.github/workf
 
 For plugins, every time it's pushed to the main branch, the code is built, tested and them published to PYPI automatically. To ensure that everything is going to go well, create and account at [pypi.org](https://pypi.org/) and setup a [Trusted publisher](https://docs.pypi.org/trusted-publishers/) mapping to your github workflow.
 
+It's not mandatory publishing it to PYPI, but it's a nice way to share it abroad. If you don't want this part, remove the `publish` job from [.github/workflows/build_test_publish.yml](./.github/workflows/build_test_publish.yml) workflow.
+
 8. Request your plugin to be added to the list
 
 After that, open an issue on [github.com/quantum-plugins/plugins-list](https://github.com/quantum-plugins/plugins-list) requesting your plugin to be added on the official plugins list. 
