@@ -34,7 +34,7 @@ Don't change this file. Only `import` the `types`, `classes` and `functions` you
 
 Besides that, you're allowed to add new files and create your structure. But, keep in mind that, more complex projects may need additional configurations on either [setup.py](./setup.py) or [pyproject.toml](./pyproject.toml).
 
-Also, you need to ensure the correct handling of the `result_types`, the possible inputs are: `'quasi_dist', 'counts', 'expval'` for now.
+Also, you need to ensure the correct handling of the `result_types`, the possible inputs are: `'quasi_dist', 'counts', 'expval'` for now. `counts` and `quasi_dists` must return a `dict` and `expval` a `list of float`.
 
 4. Add tests
 
