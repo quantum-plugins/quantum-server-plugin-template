@@ -51,6 +51,8 @@ tox
 
 With your code done, start adding your info to [setup.py](./setup.py). If you have a more complex structure, you may need to add more configurations to that, so remember to check the [setuptools guide](https://setuptools.pypa.io/en/latest/index.html).
 
+Also, take a look into [Manifest.in](./MANIFEST.in) and change the required lines.
+
 6. Update the [LICENSE](./LICENSE)
 
 The License for plugins is always `MIT`. So before proceeding, remember to update the [LICENSE file](./LICENSE) adding the year and your name.

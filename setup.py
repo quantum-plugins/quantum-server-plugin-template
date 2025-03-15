@@ -54,4 +54,5 @@ setup(
     description="A simple quantum plugin",  # describe your plugin
     long_description=get_long_description(),  # remember to update the README.md file
     long_description_content_type="text/markdown",
+    include_package_data=True
 )
